@@ -10,6 +10,7 @@
         <asp:HyperLink runat="server" NavigateUrl="~/AjaxSession.aspx">Ajax with session</asp:HyperLink>
         <br>
         <br>
+        <br>
     </div>
     <div>
         Session was set at

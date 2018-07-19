@@ -1,0 +1,13 @@
+﻿@model dynamic
+
+Username: @Model.Username
+<br>
+Name: @Model.Name
+<br>
+Position: @Model.Position
+<br>
+@using (Html.BeginForm("Logout", "Account"))
+{
+    @Html.AntiForgeryToken()
+    <input type="submit" value="Logout" />
+}

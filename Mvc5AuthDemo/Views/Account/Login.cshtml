@@ -1,0 +1,16 @@
+﻿@using Mvc5AuthDemo.Models
+@model LoginViewModel
+
+@Html.ActionLink("A protected page", "Index", "Home")
+<br>
+<br>
+
+@using (Html.BeginForm("Login", "Account"))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.LabelFor(m => m.Username)
+    @Html.TextBoxFor(m => m.Username)
+    <br>
+    <input type="submit" value="Login" />
+}
