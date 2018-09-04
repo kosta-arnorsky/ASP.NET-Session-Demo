@@ -72,8 +72,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Ajax.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="AjaxSession.aspx" />
+    <Content Include="DataBetweenRequests\Default.aspx" />
+    <Content Include="ControlData\Default.aspx" />
+    <Content Include="ControlData\ItemList.ascx" />
+    <Content Include="PageSharedData\Default.aspx" />
     <Content Include="Protected\Default.aspx" />
     <Content Include="Fast.aspx" />
     <Content Include="FastSession.aspx" />
@@ -90,6 +95,16 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ajax.aspx.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax.aspx.designer.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -103,6 +118,34 @@
     </Compile>
     <Compile Include="AjaxSession.aspx.designer.cs">
       <DependentUpon>AjaxSession.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBetweenRequests\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBetweenRequests\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlData\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlData\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlData\ItemList.ascx.cs">
+      <DependentUpon>ItemList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlData\ItemList.ascx.designer.cs">
+      <DependentUpon>ItemList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PageSharedData\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageSharedData\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Protected\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

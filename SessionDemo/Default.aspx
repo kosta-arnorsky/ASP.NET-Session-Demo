@@ -9,6 +9,10 @@
         <asp:HyperLink runat="server" NavigateUrl="~/Ajax.aspx">Ajax</asp:HyperLink>
         <asp:HyperLink runat="server" NavigateUrl="~/AjaxSession.aspx">Ajax with session</asp:HyperLink>
         <br>
+        <asp:HyperLink runat="server" NavigateUrl="~/DataBetweenRequests/">Passing data between requests</asp:HyperLink>
+        <asp:HyperLink runat="server" NavigateUrl="~/PageSharedData/?id=3">Using the same data across page</asp:HyperLink>
+        <asp:HyperLink runat="server" NavigateUrl="~/ControlData/">Passing data in child controls</asp:HyperLink>
+        <br>
         <br>
         <br>
     </div>

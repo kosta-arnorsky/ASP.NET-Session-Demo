@@ -22,6 +22,7 @@ namespace SessionDemo
                 return _userProfile;
             }
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             ctlLiteralUsername.Text = UserProfile.Username;
