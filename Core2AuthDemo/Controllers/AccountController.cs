@@ -1,4 +1,5 @@
 ﻿using Core2AuthDemo.Models;
+using FakeBackend;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +11,13 @@ namespace Core2AuthDemo.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly UserManager _userManager;
+
+        public AccountController(UserManager userManager)
+        {
+            _userManager = userManager;
+        }
+
         public IActionResult Login()
         {
             return View();
@@ -21,6 +29,13 @@ namespace Core2AuthDemo.Controllers
         {
             if (!ModelState.IsValid)
             {
+                return View(model);
+            }
+
+            var user = _userManager.GetUser(model.Username);
+            if (user == null)
+            {
+                ModelState.AddModelError("auth", "Invalid credentials.");
                 return View(model);
             }
 

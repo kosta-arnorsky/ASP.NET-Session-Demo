@@ -7,16 +7,16 @@ namespace SessionDemo
 {
     public partial class Protected : Page
     {
-        private Profile _userProfile;
+        private Lazy<UserManager> _userManager = new Lazy<UserManager>(() => new UserManager(new { someoption = "somevalue" }));
+        private User _userProfile;
 
-        protected Profile UserProfile
+        protected User UserProfile
         {
             get
             {
                 if (_userProfile == null)
                 {
-                    var userManager = new UserManager(new { someoption = "somevalue" });
-                    _userProfile = userManager.GetProfile(User.Identity.Name);
+                    _userProfile = _userManager.Value.GetUser(User.Identity.Name);
                 }
 
                 return _userProfile;

@@ -17,8 +17,8 @@ namespace Mvc5AuthDemo.Controllers
 
         public ActionResult Index()
         {
-            var profile = _userManager.GetProfile(User.Identity.GetUserId());
-            return View(profile);
+            var user = _userManager.GetUser(User.Identity.GetUserId());
+            return View(user);
         }
     }
 }

@@ -11,6 +11,8 @@
 
     @Html.LabelFor(m => m.Username)
     @Html.TextBoxFor(m => m.Username)
+    <span>try jkally or acooper</span>
     <br>
-    <input type="submit" value="Login" />
+    <input type="submit" value="Login" /><br>
+    @Html.ValidationSummary()
 }

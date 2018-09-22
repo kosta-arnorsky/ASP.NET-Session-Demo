@@ -1,6 +1,6 @@
 ﻿namespace FakeBackend
 {
-    public class Profile
+    public class User
     {
         public string Username { get; set; }
 

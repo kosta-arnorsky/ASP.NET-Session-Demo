@@ -16,8 +16,8 @@ namespace Core2AuthDemo.Controllers
 
         public IActionResult Index()
         {
-            var profile = _userManager.GetProfile(User.Identity.Name);
-            return View(profile);
+            var user = _userManager.GetUser(User.Identity.Name);
+            return View(user);
         }
     }
 }

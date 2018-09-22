@@ -1,33 +1,35 @@
-﻿using System;
-
-namespace FakeBackend
+﻿namespace FakeBackend
 {
     public class UserManager
     {
+        private readonly object _options;
+
         public UserManager(object options)
         {
+            _options = options;
         }
 
-        public Profile GetProfile(string username)
+        public User GetUser(string username)
         {
-            if (Char.ToLowerInvariant(username[0]) < 'k')
+            switch (username.Trim().ToLower())
             {
-                return new Profile
-                {
-                    Username = username,
-                    Name = "John Kally",
-                    Position = "Manager"
-                };
+                case "jkally":
+                    return new User
+                    {
+                        Username = username,
+                        Name = "John Kally",
+                        Position = "Manager"
+                    };
+                case "acooper":
+                    return new User
+                    {
+                        Username = username,
+                        Name = "Alicia Cooper",
+                        Position = "Lead"
+                    };
             }
-            else
-            {
-                return new Profile
-                {
-                    Username = username,
-                    Name = "Alicia Cooper",
-                    Position = "Lead"
-                };
-            }
+
+            return null;
         }
     }
 }

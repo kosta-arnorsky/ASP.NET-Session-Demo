@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FakeBackend;
+using System;
 using System.Web.Security;
 using System.Web.UI;
 
@@ -6,13 +7,19 @@ namespace SessionDemo
 {
     public partial class Login : Page
     {
+        private Lazy<UserManager> _userManager = new Lazy<UserManager>(() => new UserManager(new { someoption = "somevalue" }));
+
         protected void Login_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(ctlTextBoxUsername.Text))
+            var user = _userManager.Value.GetUser(ctlTextBoxUsername.Text);
+            if (user != null)
             {
-                // Validate credentials, if they are OK:
-                FormsAuthentication.SetAuthCookie(ctlTextBoxUsername.Text, true);
+                FormsAuthentication.SetAuthCookie(user.Username, true);
                 Response.Redirect("~/Protected/");
+            }
+            else
+            {
+                ctlLabelError.Text = "Invalid credentials.";
             }
         }
     }

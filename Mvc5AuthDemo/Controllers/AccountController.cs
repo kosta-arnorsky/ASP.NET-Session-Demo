@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using FakeBackend;
+using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using Mvc5AuthDemo.Models;
 using System.Collections.Generic;
@@ -10,6 +11,14 @@ namespace Mvc5AuthDemo.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly UserManager _userManager;
+
+        public AccountController()
+        {
+            // Use dependency injection
+            _userManager = new UserManager(new { someoption = "somevalue" });
+        }
+
         private IAuthenticationManager AuthenticationManager
         {
             get
@@ -32,9 +41,16 @@ namespace Mvc5AuthDemo.Controllers
                 return View(model);
             }
 
+            var user = _userManager.GetUser(model.Username);
+            if (user == null)
+            {
+                ModelState.AddModelError("auth", "Invalid credentials.");
+                return View(model);
+            }
+
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, model.Username)
+                new Claim(ClaimTypes.NameIdentifier, user.Username)
             };
             var identity = new ClaimsIdentity(claims, DefaultAuthenticationTypes.ApplicationCookie);
             AuthenticationManager.SignIn(identity);
