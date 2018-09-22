@@ -73,6 +73,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ajax.aspx" />
+    <Content Include="LooselyCoupledComponents\Default.aspx" />
+    <Content Include="LooselyCoupledComponents\Snippet.ascx" />
+    <Content Include="LooselyCoupledComponents\External.ascx" />
+    <Content Include="LooselyCoupledComponents\Internal.ascx" />
     <Content Include="Login.aspx" />
     <Content Include="AjaxSession.aspx" />
     <Content Include="DataBetweenRequests\Default.aspx" />
@@ -104,6 +108,35 @@
     </Compile>
     <Compile Include="Code\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Code\SnippetHelper.cs" />
+    <Compile Include="LooselyCoupledComponents\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LooselyCoupledComponents\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LooselyCoupledComponents\Snippet.ascx.cs">
+      <DependentUpon>Snippet.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LooselyCoupledComponents\Snippet.ascx.designer.cs">
+      <DependentUpon>Snippet.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LooselyCoupledComponents\External.ascx.cs">
+      <DependentUpon>External.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LooselyCoupledComponents\External.ascx.designer.cs">
+      <DependentUpon>External.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LooselyCoupledComponents\Internal.ascx.cs">
+      <DependentUpon>Internal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LooselyCoupledComponents\Internal.ascx.designer.cs">
+      <DependentUpon>Internal.ascx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
