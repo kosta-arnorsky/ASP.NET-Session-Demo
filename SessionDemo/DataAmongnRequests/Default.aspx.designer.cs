@@ -10,7 +10,7 @@
 namespace SessionDemo {
     
     
-    public partial class DataBetweenRequests {
+    public partial class DataAmongnRequests {
         
         /// <summary>
         /// ctlHiddenFieldAccumulator control.

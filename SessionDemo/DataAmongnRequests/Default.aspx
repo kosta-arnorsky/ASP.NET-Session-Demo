@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SessionDemo.DataBetweenRequests" EnableSessionState="False" EnableViewState="false" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SessionDemo.DataAmongnRequests" EnableSessionState="False" EnableViewState="false" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <asp:HiddenField runat="server" ID="ctlHiddenFieldAccumulator" />

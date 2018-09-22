@@ -3,7 +3,7 @@ using System.Web.UI;
 
 namespace SessionDemo
 {
-    public partial class DataBetweenRequests : Page
+    public partial class DataAmongnRequests : Page
     {
         protected void Post_Click(object sender, EventArgs e)
         {
