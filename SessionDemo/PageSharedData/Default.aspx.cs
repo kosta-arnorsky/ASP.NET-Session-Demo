@@ -33,7 +33,7 @@ namespace SessionDemo
 
         protected void DoSomething_Click(object sender, EventArgs e)
         {
-            ctlLiteralActionResult.Text = "Still have access the Item ID " + Item.Id + " without calling the repository twice or saving it in the session.";
+            ctlLiteralActionResult.Text = "Still have access to the Item ID " + Item.Id + " without calling the repository twice or saving it in the session.";
         }
     }
 }

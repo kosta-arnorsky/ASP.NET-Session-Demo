@@ -19,7 +19,7 @@ namespace SessionDemo
             var userId = HttpContext.Current.Session["user"] as string;
 
             Thread.Sleep(7000);
-            return "Sesson unlocked, " + DateTime.Now.ToString("mm:ss.fff");
+            return "Session has been unlocked, " + DateTime.Now.ToString("mm:ss.fff");
         }
 
         [WebMethod]
@@ -28,7 +28,7 @@ namespace SessionDemo
             var userId = HttpContext.Current.Session["user"] as string;
 
             Thread.Sleep(1000);
-            return "Sesson is used, " + DateTime.Now.ToString("mm:ss.fff");
+            return "Session is used, " + DateTime.Now.ToString("mm:ss.fff");
         }
     }
 }

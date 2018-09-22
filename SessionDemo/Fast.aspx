@@ -6,7 +6,7 @@
         Session was set at<asp:Literal runat="server" ID="ctlLiteralTime" />
     </p>
     <p>
-        Processed
+        Processed at
         <asp:Literal runat="server" ID="ctlLiteralEnded" />
     </p>
 </asp:Content>
