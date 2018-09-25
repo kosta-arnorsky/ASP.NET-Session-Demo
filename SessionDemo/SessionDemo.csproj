@@ -73,6 +73,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ajax.aspx" />
+    <Content Include="ControlData2\Default.aspx" />
+    <Content Include="ControlData2\ItemTr.ascx" />
     <Content Include="LooselyCoupledComponents\Default.aspx" />
     <Content Include="LooselyCoupledComponents\Snippet.ascx" />
     <Content Include="LooselyCoupledComponents\External.ascx" />
@@ -110,6 +112,20 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Code\SnippetHelper.cs" />
+    <Compile Include="ControlData2\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlData2\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlData2\ItemTr.ascx.cs">
+      <DependentUpon>ItemTr.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlData2\ItemTr.ascx.designer.cs">
+      <DependentUpon>ItemTr.ascx</DependentUpon>
+    </Compile>
     <Compile Include="LooselyCoupledComponents\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

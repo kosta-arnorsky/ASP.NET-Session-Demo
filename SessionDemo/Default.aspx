@@ -38,6 +38,6 @@
         setTimeout(function () {
             demo.append("Loading a fast page which uses the session<br><br><iframe src=\"<%: ResolveClientUrl("~/FastSession.aspx") %>\"></iframe><br><br>");
             demo.append("Loading a fast page which dosen't use the session<br><br><iframe src=\"<%: ResolveClientUrl("~/Fast.aspx") %>\"></iframe>");
-        }, 1111);
+        }, 333);
     </script>
 </asp:Content>
